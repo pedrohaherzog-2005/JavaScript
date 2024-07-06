@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Votação</h1>
+    <form method="POST">
+        <label>Idade: </label>
+        <input type="text" name="txti" id="txti">
+        <br>
+        <input type="button" value="Verificar" onclick="verificar()">
+        <input type="reset" nome="limpar" value="Limpar">
+    </form>
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var txti = window.document.querySelector('input#txti')
+            var res = window.document.querySelector('div#res')
+            var idade = txti.value
+            res.innerHTML = `<p>Você tem <strong>${idade} anos</strong>.</p>`
+            if (idade < 16) {
+                res.innerHTML += 'Você <strong>Não</strong> pode votar.'
+            } else if (idade >= 18 && idade <= 70) {
+                res.innerHTML += 'O seu voto é <strong>Obrigatório</strong>.'
+            } else if (idade < 18 && idade == 16) {
+                res.innerHTML += 'O seu voto é <strong>Opcional</strong>.'
+            } else if (idade > 70) {
+                res.innerHTML += 'O seu voto é <strong>Opcional</strong>.'
+            }
+        }
+
+    </script>
+</body>
+</html>

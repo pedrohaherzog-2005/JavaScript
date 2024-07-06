@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dias da Semana</h1>
+    <form method="POST">
+        <label>Dia: </label>
+        <input type="text" name="txtd" id="txtd">
+        <br>
+        <input type="button" value="Verificar" onclick="verificar()">
+        <input type="reset" nome="limpar" value="Limpar">
+    </form>
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var txtd = window.document.querySelector('input#txtd')
+            var res = window.document.querySelector('div#res')
+            var diaSem = txtd.value
+            res.innerHTML = `<p><strong>${diaSem}</strong>º dia da semana.</p>`
+            if (diaSem == 0) {
+                res.innerHTML += '<strong>Zero</strong> é igual a <strong>Domingo</strong>.'
+            } else if (diaSem == 1) {
+                res.innerHTML += '<strong>Um</strong> é igual a <strong>Segunda</strong>.'
+            } else if (diaSem == 2) {
+                res.innerHTML += '<strong>Dois</strong> é igual a <strong>Terça</strong>.'
+            } else if (diaSem == 3) {
+                res.innerHTML += '<strong>Três</strong> é igual a <strong>Quarta</strong>.'
+            } else if (diaSem == 4) {
+                res.innerHTML += '<strong>Quatro</strong> é igual a <strong>Quinta</strong>.'
+            } else if (diaSem == 5) {
+                res.innerHTML += '<strong>Cinco</strong> é igual a <strong>Sexta</strong>.'
+            } else if (diaSem == 6) {
+                res.innerHTML += '<strong>Seis</strong> é igual a <strong>Sábado</strong>.'
+            }
+        }
+
+        /* var dia = new Date()
+           var diaSem = dia.getDay() */
+
+    </script>
+</body>
+</html>

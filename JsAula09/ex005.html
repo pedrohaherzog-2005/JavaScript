@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 15pt;
+        }
+
+        header {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado.</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">Clique em mim</div>
+
+    <h2>Seletores</h2>
+    <p>
+        <header>
+            var corpo = window.document.body
+            <br>
+            <br>
+            var p1 = window.document.getElementsByTagName('p')[1]
+            window.document.write('O primeiro parágrafo está escrito assim: ' + p1.innerText)
+            p1.style.color = 'yellow'
+            <br>
+            <br>
+            var d = window.document.getElementById('msg')
+            d.style.background = 'red'
+            d.innerText = 'Estou aguardando...'
+            <br>
+            <br>
+            var d = window.document.getElementsByName('msg')[0]
+            d.innerText = 'Hallo, Americayaaa!!!'
+            d.style.background = 'green'
+            <br>
+            <br>
+            var d = window.document.getElementsByClassName('msg')[0]
+            d.innerText = 'Hello, United States of American!'
+            d.style.background = 'blue'
+            <br>
+            <br>
+            var d = window.document.querySelector('div.msg')
+            d.style.background = 'darkblue'
+        </header>
+    </p>
+    <br>
+    <script>
+
+        var corpo = window.document.body
+        /* var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('O primeiro parágrafo está escrito assim: ' + p1.innerText)
+        p1.style.color = 'yellow' */
+
+        /* var d = window.document.getElementById('msg')
+        d.style.background = 'red'
+        d.innerText = 'Estou aguardando...' */
+
+        /* var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Hallo, Americayaaa!!!'
+        d.style.background = 'green' */
+
+        /* var d = window.document.getElementsByClassName('msg')[0]
+        d.innerText = 'Hello, United States of American!'
+        d.style.background = 'blue' */
+
+        /* var d = window.document.querySelector('div.msg')
+        d.style.background = 'darkblue' */
+
+    </script>
+</body>
+</html>

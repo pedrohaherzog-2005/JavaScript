@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfândega</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Alfândega</h1>
+    <form method="POST">
+        <label>Passaporte: </label>
+        <input type="text" name="txtp" id="txtp">
+        <br>
+        <input type="button" value="Verificar" onclick="verificar()">
+        <input type="reset" nome="limpar" value="Limpar">
+    </form>
+    <div id="res">
+
+    </div>
+    <script>
+    
+        function verificar() {
+            var txtp = window.document.querySelector('input#txtp')
+            var res = window.document.querySelector('div#res')
+            var país = txtp.value
+            res.innerHTML = `<p>O passaporte é do <strong>${país}</strong>.</p>`
+            if (país == 'Brasil') {
+                res.innerHTML += 'O passageiro é <strong>brasileiro</strong>.'
+            } else {
+                res.innerHTML += 'O passageiro é <strong>estrangeiro</strong>(Gringo).'
+            }
+        }
+
+    </script>
+</body>
+</html>

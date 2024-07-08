@@ -1,5 +1,5 @@
 var c = 1
-while (c <= 9) {
+while (c <= 13) {
     console.log(`Passo ${c}`)
     c++
 }

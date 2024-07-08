@@ -1,6 +1,7 @@
 var c = 1
 while (c <= 9) {
     console.log(`Passo ${c}`)
+    c++
 }
 
 /* console.log('Tudo bem?')
